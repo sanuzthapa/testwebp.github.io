@@ -12,7 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
             populateCertifications(data.certifications);
             populateContact(data.personal);
         })
-        .catch(error => console.error('Error loading data:', error));
+        .catch(error => {
+            console.error('Error loading data:', error);
+            alert('Error loading portfolio data. Please ensure data.json is in the same directory.');
+        });
 
     // Smooth scroll for navigation links
     setupSmoothScroll();
@@ -48,8 +51,7 @@ function populateHero(personal) {
     if (personal.profileImage) {
         const img = document.getElementById('profileImage');
         img.src = personal.profileImage;
-        img.style.display = 'block';
-        document.getElementById('imagePlaceholder').style.display = 'none';
+        img.alt = personal.name;
     }
 }
 
@@ -92,6 +94,15 @@ function populateProjects(projects) {
     projects.forEach(project => {
         const card = document.createElement('div');
         card.className = 'project-card';
+
+        // Add project image if available
+        if (project.image) {
+            const img = document.createElement('img');
+            img.src = project.image;
+            img.alt = project.title;
+            img.className = 'project-image';
+            card.appendChild(img);
+        }
 
         const title = document.createElement('h3');
         title.textContent = project.title;
@@ -252,7 +263,7 @@ function populateCertifications(certifications) {
 
         const icon = document.createElement('div');
         icon.className = 'cert-icon';
-        icon.textContent = '📜';
+        icon.textContent = cert.icon || '📜';
 
         const title = document.createElement('h3');
         title.textContent = cert.title;
@@ -341,7 +352,8 @@ function setupSmoothScroll() {
 function setupButtonInteractions() {
     const contactButtons = document.querySelectorAll('.btn-primary, .btn-header');
     contactButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
             const contactSection = document.getElementById('contact');
             if (contactSection) {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
@@ -351,10 +363,11 @@ function setupButtonInteractions() {
 
     const githubButtons = document.querySelectorAll('.btn-secondary');
     githubButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
             // Get GitHub link from data
             const githubLink = document.getElementById('githubLink');
-            if (githubLink && githubLink.href) {
+            if (githubLink && githubLink.href && githubLink.href !== '#') {
                 window.open(githubLink.href, '_blank');
             }
         });

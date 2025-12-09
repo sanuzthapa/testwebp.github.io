@@ -9,7 +9,7 @@
     "location": "Besançon, France",
     "linkedin": "https://linkedin.com/in/sanuz-thapa",
     "github": "https://sanuzthapa.github.io",
-    "profileImage": ""
+    "profileImage": "images/profile.jpg"
   },
   "skills": [
     {
@@ -36,7 +36,8 @@
       "context": "Developed for policy research institute",
       "action": "Built ETL pipeline and predictive models",
       "result": "40% faster policy decision-making",
-      "tags": ["Python", "ML", "Economics"]
+      "tags": ["Python", "ML", "Economics"],
+      "image": "images/project-1.jpg"
     },
     {
       "title": "Behavioral Economics Research Tool",
@@ -44,7 +45,8 @@
       "context": "Academic research collaboration",
       "action": "Designed data collection and analysis system",
       "result": "500+ participants, published findings",
-      "tags": ["Data Science", "Research", "Psychology"]
+      "tags": ["Data Science", "Research", "Psychology"],
+      "image": "images/project-2.jpg"
     },
     {
       "title": "Automated Report Generation System",
@@ -52,7 +54,8 @@
       "context": "Enterprise automation project",
       "action": "Implemented NLP pipeline and automation",
       "result": "80% reduction in manual work",
-      "tags": ["NLP", "Automation", "Python"]
+      "tags": ["NLP", "Automation", "Python"],
+      "image": "images/project-3.jpg"
     },
     {
       "title": "Market Sentiment Analysis",
@@ -60,7 +63,8 @@
       "context": "Financial analysis initiative",
       "action": "Built sentiment classification model",
       "result": "75% accuracy in trend prediction",
-      "tags": ["ML", "NLP", "Finance"]
+      "tags": ["ML", "NLP", "Finance"],
+      "image": "images/project-4.jpg"
     },
     {
       "title": "Data Visualization Platform",
@@ -68,7 +72,8 @@
       "context": "Client reporting solution",
       "action": "Created custom visualization components",
       "result": "Improved client engagement by 60%",
-      "tags": ["Data Viz", "React", "D3.js"]
+      "tags": ["Data Viz", "React", "D3.js"],
+      "image": "images/project-1.jpg"
     },
     {
       "title": "Predictive Analytics Engine",
@@ -76,7 +81,8 @@
       "context": "Strategic planning tool",
       "action": "Developed ensemble models",
       "result": "RMSE improved by 35%",
-      "tags": ["ML", "Time Series", "Python"]
+      "tags": ["ML", "Time Series", "Python"],
+      "image": "images/project-4.jpg"
     }
   ],
   "experience": [
@@ -157,28 +163,24 @@
       "issuer": "Amazon Web Services",
       "year": "2023",
       "credentialId": "AWS-SAA-2023-001",
-      "link": "#"
+      "link": "#",
+      "icon": "📜"
     },
     {
       "title": "Google Cloud Professional Data Engineer",
       "issuer": "Google Cloud",
       "year": "2023",
       "credentialId": "GCP-DE-2023-001",
-      "link": "#"
+      "link": "#",
+      "icon": "📜"
     },
     {
       "title": "Microsoft Certified: Data Scientist Associate",
       "issuer": "Microsoft",
       "year": "2022",
       "credentialId": "MS-DSA-2022-001",
-      "link": "sanuzhthapa.github.io"
-    },
-    {
-      "title": "F@ke certificate",
-      "issuer": "Microsoft",
-      "year": "2022",
-      "credentialId": "MS-DSA-2022-001",
-      "link": "sanuzhthapa.github.io"
+      "link": "#",
+      "icon": "📜"
     }
   ]
 }
